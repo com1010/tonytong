@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>桂林家人的自传 · 唐家梁家的故事 | Guilin Family Biographies</title>
+<style>
+  :root {
+    --paper: #F5F0E4;
+    --paper-deep: #EDE6D4;
+    --ink: #1B1712;
+    --ink-soft: #3A352C;
+    --ink-mute: #6B6353;
+    --ink-faint: #8A8272;
+    --vermillion: #B93A1B;
+    --gold: #C9A86A;
+    --line: #D8CDB4;
+    --card: #FFFFFF;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper);
+    color: var(--ink-soft);
+    font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun", serif;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1440px; margin: 0 auto; }
+
+  /* ---------- Header ---------- */
+  header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 24px 80px;
+  }
+  .brand { display: flex; align-items: center; gap: 14px; }
+  .seal {
+    width: 42px; height: 42px; border-radius: 4px;
+    background: var(--vermillion); color: var(--paper);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; font-weight: 700;
+  }
+  .brand-name { display: flex; flex-direction: column; line-height: 1.4; }
+  .brand-cn { font-size: 16px; font-weight: 600; letter-spacing: 4px; color: var(--ink); }
+  .brand-en { font-size: 10px; letter-spacing: 3px; color: var(--ink-faint); }
+  .head-meta { font-size: 13px; letter-spacing: 2px; color: var(--ink-faint); }
+
+  /* ---------- Top Contents ---------- */
+  .top { padding: 60px 24px 76px; border-bottom: 1px solid var(--line); }
+  .top-inner { max-width: 1040px; margin: 0 auto; }
+  .top-head { text-align: center; margin-bottom: 50px; }
+  .top-head h1 {
+    font-size: clamp(27px, 3.5vw, 44px); font-weight: 700;
+    letter-spacing: 6px; text-indent: 6px; color: var(--ink); line-height: 1.4;
+  }
+  .top-head .en {
+    margin-top: 16px; font-size: clamp(14px, 1.5vw, 17px);
+    letter-spacing: 3px; color: var(--ink-mute);
+  }
+  .top-head .url { margin-top: 20px; font-size: 13px; letter-spacing: 1px; }
+  .top-head .url a {
+    color: var(--vermillion); text-decoration: none;
+    border-bottom: 1px solid rgba(185, 58, 27, 0.3); padding-bottom: 2px;
+  }
+  .top-head .url a:hover { border-bottom-color: var(--vermillion); }
+
+  .top-toc {
+    background: var(--card); border: 1px solid var(--line); border-radius: 3px;
+    padding: 32px 40px 10px;
+  }
+  .top-toc-label { font-size: 12px; letter-spacing: 5px; color: var(--vermillion); margin-bottom: 4px; }
+  .top-toc ol { list-style: none; }
+  .top-toc li + li { border-top: 1px solid var(--line); }
+  .top-toc .row {
+    display: flex; align-items: baseline; gap: 22px;
+    padding: 22px 0; text-decoration: none; color: inherit;
+  }
+  .top-toc .idx {
+    flex: 0 0 auto; min-width: 26px;
+    font-size: 13px; letter-spacing: 2px; font-weight: 600; color: var(--vermillion);
+  }
+  .top-toc .body { flex: 1 1 auto; display: flex; flex-direction: column; gap: 7px; }
+  .top-toc .name {
+    font-size: 17px; letter-spacing: 1px; color: var(--ink);
+    transition: color 0.15s ease;
+  }
+  .top-toc .en { font-size: 13.5px; letter-spacing: 0.5px; color: var(--ink-faint); }
+  .top-toc .by { font-size: 12.5px; letter-spacing: 1px; color: var(--ink-mute); }
+  .top-toc .booklink {
+    color: var(--vermillion); text-decoration: none;
+    border-bottom: 1px solid rgba(185, 58, 27, 0.3); padding-bottom: 1px;
+  }
+  .top-toc .booklink:hover { border-bottom-color: var(--vermillion); }
+  .top-toc .go { flex: 0 0 auto; font-size: 13px; color: var(--ink-faint); transition: color 0.15s ease; }
+  .top-toc a.row:hover .name { color: var(--vermillion); }
+  .top-toc a.row:hover .go { color: var(--vermillion); }
+
+  /* 加厚条目（带封面与看点） */
+  .top-toc li.ext .row { align-items: flex-start; padding: 26px 0; }
+  .top-toc .cover {
+    flex: 0 0 auto; width: 96px; aspect-ratio: 100 / 139; overflow: hidden;
+    border: 1px solid var(--line); border-radius: 2px;
+    box-shadow: 0 6px 18px rgba(27, 23, 18, 0.14);
+  }
+  .top-toc .cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .top-toc .sub {
+    font-size: 14px; letter-spacing: 0.5px; color: var(--ink-mute);
+  }
+  .top-toc .bullets { margin: 2px 0 0; padding: 0; list-style: none; }
+  .top-toc .bullets li {
+    position: relative; padding-left: 16px; margin-bottom: 5px;
+    font-size: 13.5px; line-height: 1.75; color: var(--ink-mute); letter-spacing: 0.3px;
+    border-top: 0;
+  }
+  .top-toc .bullets li::before {
+    content: ""; position: absolute; left: 0; top: 0.72em;
+    width: 7px; height: 1.5px; background: var(--vermillion);
+  }
+  .top-toc .links { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 8px; }
+  .top-toc .links a {
+    font-size: 12.5px; letter-spacing: 0.5px; color: var(--ink-mute); text-decoration: none;
+    border-bottom: 1px solid var(--line); padding-bottom: 1px; transition: color 0.15s ease;
+  }
+  .top-toc .links a:hover { color: var(--vermillion); border-bottom-color: var(--vermillion); }
+  @media (max-width: 900px) {
+    .top-toc .cover { width: 74px; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    background: var(--ink); color: var(--paper);
+    padding: 110px 120px 120px;
+    text-align: center; position: relative; overflow: hidden;
+  }
+  .hero .watermark {
+    position: absolute; right: -40px; top: -80px;
+    font-size: 460px; font-weight: 700; line-height: 1;
+    color: rgba(245, 240, 228, 0.05);
+    pointer-events: none; user-select: none;
+  }
+  .hero > * { position: relative; }
+  .chip {
+    display: inline-block; padding: 8px 18px; border-radius: 999px;
+    border: 1px solid var(--vermillion);
+    font-size: 13px; letter-spacing: 4px; color: var(--gold);
+    margin-bottom: 28px;
+  }
+  .hero h2 {
+    font-size: clamp(38px, 5.2vw, 74px); font-weight: 700;
+    letter-spacing: 2px; color: var(--paper);
+  }
+  .hero .title-en {
+    margin-top: 22px; font-size: clamp(18px, 2vw, 26px);
+    letter-spacing: 2px; color: var(--gold);
+  }
+  .divider { width: 72px; height: 3px; background: var(--vermillion); margin: 34px auto; }
+  .hero .title-long {
+    font-size: clamp(23px, 3.2vw, 46px); line-height: 1.55; letter-spacing: 1px;
+    max-width: 1000px; margin: 0 auto;
+  }
+  .hero .title-en-sm {
+    font-size: clamp(14px, 1.35vw, 18px); letter-spacing: 1px;
+    max-width: 820px; margin-left: auto; margin-right: auto; line-height: 1.7;
+  }
+  .hero .sub-en {
+    font-size: clamp(13px, 1.2vw, 16px); line-height: 1.85; color: var(--ink-faint);
+    max-width: 780px; margin: 0 auto; letter-spacing: .5px;
+  }
+  .hero .sub-zh {
+    margin-top: 12px; font-size: clamp(13px, 1.2vw, 16px); line-height: 1.85;
+    color: var(--ink-faint); max-width: 780px; margin-left: auto; margin-right: auto; letter-spacing: 1px;
+  }
+  .hero .const-zh {
+    font-size: clamp(16px, 1.7vw, 22px); color: var(--gold); letter-spacing: 3px; font-weight: 600;
+  }
+  .hero .const-en {
+    margin-top: 10px; font-size: clamp(13px, 1.2vw, 16px); color: var(--ink-faint); letter-spacing: 1px;
+  }
+  .hero .authors { font-size: clamp(15px, 1.5vw, 19px); color: #D8CFBB; letter-spacing: 1px; }
+  .hero .publish { margin-top: 14px; font-size: 15px; color: var(--ink-faint); letter-spacing: 1px; }
+
+  /* ---------- About ---------- */
+  .about { padding: 96px 24px; text-align: center; }
+  .about-inner { max-width: 880px; margin: 0 auto; }
+  .sec-label {
+    font-size: 14px; letter-spacing: 5px; color: var(--vermillion);
+    font-weight: 500; margin-bottom: 18px;
+  }
+  .about h2 {
+    font-size: clamp(24px, 2.6vw, 34px); font-weight: 600;
+    color: var(--ink); letter-spacing: 2px; margin-bottom: 34px;
+  }
+  .about .zh { font-size: 18px; line-height: 2; color: var(--ink-soft); margin-bottom: 26px; }
+  .about .en { font-size: 16px; line-height: 1.9; color: var(--ink-mute); margin-bottom: 40px; }
+  .about .blk { border-top: 1px solid rgba(27,23,18,.14); padding-top: 36px; margin-bottom: 10px; }
+  .about .blk-label { font-size: 13px; letter-spacing: 4px; color: var(--vermillion); font-weight: 500; margin-bottom: 10px; }
+  .about .blk-title { font-size: 21px; font-weight: 600; color: var(--ink); letter-spacing: 1px; margin-bottom: 24px; line-height: 1.6; }
+  .about h3 { font-size: 18px; font-weight: 600; color: var(--ink); letter-spacing: 1px; margin: 30px 0 14px; }
+  .about .zh-sm { font-size: 17px; line-height: 2.05; color: var(--ink-soft); margin-bottom: 20px; text-align: justify; }
+  .about .note { font-size: 15px; line-height: 1.95; color: var(--ink-mute); border-left: 3px solid var(--vermillion); padding-left: 16px; margin-top: 34px; }
+  .meta-chips { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .meta-chips span {
+    padding: 9px 18px; border-radius: 999px;
+    background: var(--card); border: 1px solid var(--line);
+    font-size: 14px; color: var(--ink-soft);
+  }
+
+  /* ---------- Gallery ---------- */
+  .gallery {
+    background: var(--paper-deep);
+    padding: 96px 24px 110px;
+  }
+  .gallery-inner { max-width: 900px; margin: 0 auto; }
+  figure { margin: 0 0 88px; text-align: center; }
+  figure:last-child { margin-bottom: 0; }
+  figure .photo {
+    position: relative; display: inline-block; max-width: 100%;
+    border: 1px solid var(--line); border-radius: 3px;
+    background: #DDD3BE;
+    box-shadow: 0 16px 36px -6px rgba(28, 23, 18, 0.18);
+  }
+  figure .photo img { display: block; width: 100%; height: auto; border-radius: 3px; }
+  figcaption {
+    margin-top: 18px; font-size: 14px; letter-spacing: 3px; color: var(--ink-faint);
+  }
+  /* graceful 待补图 state when an image file is not present yet */
+  figure .photo.pending, figure .photo.missing {
+    display: inline-flex; align-items: center; justify-content: center;
+    height: 240px; border-style: dashed; background: var(--paper-deep);
+    box-shadow: none; padding: 0 20px;
+  }
+  figure .photo.pending img, figure .photo.missing img { display: none; }
+  figure .photo.pending::after, figure .photo.missing::after {
+    content: "待补图 · " attr(data-file);
+    font-size: 13px; letter-spacing: 1px; color: var(--ink-faint);
+  }
+
+  /* ---------- Part Divider (second work) ---------- */
+  .part {
+    background: var(--ink); color: var(--paper);
+    padding: 104px 120px 92px;
+    text-align: center; position: relative; overflow: hidden;
+  }
+  .part .watermark2 {
+    position: absolute; left: -34px; bottom: -170px;
+    font-size: 420px; font-weight: 700; line-height: 1;
+    color: rgba(185, 58, 27, 0.11);
+    pointer-events: none; user-select: none;
+  }
+  .part > * { position: relative; }
+  .part .kicker { font-size: 12px; letter-spacing: 7px; color: var(--gold); margin-bottom: 30px; text-indent: 7px; }
+  .part h2 {
+    font-size: clamp(44px, 7vw, 88px); font-weight: 700;
+    letter-spacing: 14px; text-indent: 14px; color: var(--paper); line-height: 1.25;
+  }
+  .part .sub { margin-top: 22px; font-size: clamp(15px, 1.7vw, 20px); letter-spacing: 3px; color: var(--gold); }
+  .part .meta { margin-top: 32px; font-size: 13px; letter-spacing: 2px; color: var(--ink-mute); }
+  .part .meta .dot { color: var(--vermillion); margin: 0 12px; }
+
+  /* ---------- Memoir ---------- */
+  .memoir { padding: 84px 24px 96px; }
+  .memoir-inner { max-width: 760px; margin: 0 auto; }
+
+  .toc {
+    background: var(--card); border: 1px solid var(--line); border-radius: 3px;
+    padding: 28px 34px 30px; margin-bottom: 84px;
+  }
+  .toc-title { font-size: 12px; letter-spacing: 5px; color: var(--vermillion); margin-bottom: 20px; }
+  .toc ul { list-style: none; display: flex; flex-direction: column; gap: 13px; }
+  .toc a {
+    color: var(--ink-soft); text-decoration: none; font-size: 15px; letter-spacing: 1px;
+    border-bottom: 1px solid transparent; padding-bottom: 2px;
+  }
+  .toc a:hover { color: var(--vermillion); border-bottom-color: var(--vermillion); }
+  .toc a .n { display: inline-block; min-width: 86px; font-size: 12.5px; letter-spacing: 2px; color: var(--ink-faint); }
+
+  .ch-head { display: block; text-align: center; margin: 0 0 48px; padding: 0; }
+  .ch-head .rule { width: 44px; height: 2px; background: var(--vermillion); margin: 0 auto 28px; }
+  .ch-head .n { font-size: 12.5px; letter-spacing: 8px; color: var(--vermillion); margin-bottom: 16px; text-indent: 8px; }
+  .ch-head h3 { font-size: clamp(26px, 3.4vw, 40px); font-weight: 600; letter-spacing: 4px; color: var(--ink); text-indent: 4px; }
+  .ch-head .sub { margin-top: 14px; font-size: 14px; letter-spacing: 3px; color: var(--ink-faint); }
+
+  .memoir p { font-size: 18px; line-height: 2.05; color: var(--ink-soft); text-indent: 2em; margin-bottom: 1.15em; }
+  .memoir p:last-child { margin-bottom: 0; }
+
+  .chapter + .chapter { margin-top: 0; }
+  .ch-sep {
+    text-align: center; color: var(--vermillion); opacity: 0.5;
+    font-size: 9px; letter-spacing: 14px; text-indent: 14px;
+    margin: 80px 0;
+  }
+
+  /* archival aside (史料注) */
+  .note {
+    margin: 42px 0 50px; padding: 30px 34px 32px;
+    background: var(--card);
+    border-left: 3px solid var(--vermillion);
+    border-top: 1px solid var(--line);
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    border-radius: 0 3px 3px 0;
+  }
+  .note-title { font-size: 13px; letter-spacing: 3px; color: var(--vermillion); margin-bottom: 8px; }
+  .note-lead { font-size: 14px; color: var(--ink-faint); letter-spacing: 1px; margin-bottom: 24px; }
+  .note .lbl { font-size: 15px; font-weight: 600; color: var(--ink); letter-spacing: 1px; margin: 24px 0 8px; }
+  .note .lbl:first-of-type { margin-top: 0; }
+  .note .lbl.big { font-size: 16px; color: var(--vermillion); letter-spacing: 2px; margin-top: 30px; }
+  .note p { font-size: 15.5px; line-height: 1.95; color: var(--ink-mute); text-indent: 0; margin-bottom: 10px; }
+  .note p:last-child { margin-bottom: 0; }
+
+  /* archive photo strip inside the memoir */
+  .archive {
+    background: var(--paper-deep); border-radius: 3px;
+    padding: 48px 30px 52px; margin: 64px 0 72px;
+  }
+  .archive-label {
+    text-align: center; font-size: 12px; letter-spacing: 5px;
+    color: var(--ink-faint); margin-bottom: 44px;
+  }
+  .archive figure { margin-bottom: 64px; }
+  .archive figure:last-child { margin-bottom: 0; }
+
+  .sub-head {
+    position: relative; margin: 56px 0 26px; padding-left: 20px;
+    font-size: 21px; font-weight: 600; letter-spacing: 2px; color: var(--ink);
+  }
+  .sub-head::before {
+    content: ""; position: absolute; left: 0; top: 0.35em;
+    width: 4px; height: 1.05em; background: var(--vermillion); border-radius: 2px;
+  }
+  .to-continue {
+    margin-top: 34px; padding-top: 26px; border-top: 1px dashed var(--line);
+    font-size: 13px; letter-spacing: 3px; color: var(--ink-faint); text-align: center;
+  }
+
+  /* ---------- Appendix poem · 宽心谣 ---------- */
+  .kx { background: var(--paper-deep); padding: 96px 24px 104px; }
+  .kx-inner { max-width: 1080px; margin: 0 auto; }
+  .kx-head { text-align: center; margin-bottom: 46px; }
+  .kx-head .rule { width: 44px; height: 2px; background: var(--vermillion); margin: 0 auto 26px; }
+  .kx-kicker { font-size: 12px; letter-spacing: 7px; text-indent: 7px; color: var(--vermillion); margin-bottom: 16px; }
+  .kx-title { font-size: clamp(30px, 4vw, 44px); font-weight: 700; letter-spacing: 10px; text-indent: 10px; color: var(--ink); }
+  .kx-by { margin-top: 16px; font-size: 14px; letter-spacing: 2px; color: var(--ink-faint); }
+
+  .kx-card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 3px;
+    padding: 56px 48px 26px;
+    box-shadow: 0 18px 40px -18px rgba(27, 23, 18, 0.16);
+  }
+  .kx-poem { columns: 3; column-gap: 52px; column-rule: 1px solid var(--line); }
+  .kx-st { break-inside: avoid; page-break-inside: avoid; text-align: center; padding-bottom: 34px; }
+  .kx-l {
+    font-size: 17px; line-height: 1.7; letter-spacing: 4px; text-indent: 4px;
+    color: var(--ink); margin-bottom: 6px;
+  }
+  .kx-p {
+    font-size: 15px; line-height: 1.85; letter-spacing: 4px; text-indent: 4px;
+    color: var(--ink-mute);
+  }
+  .kx-p b { font-weight: 500; color: var(--vermillion); }
+
+  @media (max-width: 1040px) { .kx-poem { columns: 2; } }
+  @media (max-width: 900px) {
+    .kx { padding: 72px 20px 80px; }
+    .kx-card { padding: 38px 24px 14px; }
+    .kx-poem { column-gap: 36px; }
+  }
+  @media (max-width: 620px) {
+    .kx-poem { columns: 1; column-rule: 0; }
+    .kx-card { padding: 32px 16px 8px; }
+    .kx-title { letter-spacing: 7px; text-indent: 7px; }
+    .kx-by { font-size: 12.5px; letter-spacing: 1px; line-height: 1.9; padding: 0 4px; }
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    background: var(--ink); color: #D8CFBB;
+    text-align: center; padding: 48px 24px;
+  }
+  footer .main { font-size: 14px; letter-spacing: 1px; }
+  footer .sub { margin-top: 10px; font-size: 12px; color: var(--ink-mute); letter-spacing: 1px; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px) {
+    header { padding: 20px 24px; }
+    .head-meta { display: none; }
+    .top { padding: 44px 22px 56px; }
+    .top-head { margin-bottom: 34px; }
+    .top-head h1 { letter-spacing: 3px; text-indent: 3px; }
+    .top-head .en { letter-spacing: 1px; }
+    .top-toc { padding: 24px 22px 8px; }
+    .top-toc .row { gap: 14px; padding: 18px 0; }
+    .top-toc .name { font-size: 16px; }
+    .top-toc .go { display: none; }
+    .hero { padding: 80px 24px; }
+    .hero .watermark { font-size: 300px; }
+    .about { padding: 72px 24px; }
+    .gallery { padding: 72px 20px 80px; }
+    figure { margin-bottom: 64px; }
+    .part { padding: 76px 24px 68px; }
+    .part .watermark2 { font-size: 260px; bottom: -100px; }
+    .part h2 { letter-spacing: 8px; text-indent: 8px; }
+    .memoir { padding: 64px 22px 72px; }
+    .toc { padding: 24px 22px 26px; margin-bottom: 64px; }
+    .toc a .n { display: block; min-width: 0; margin-bottom: 2px; }
+    .memoir p { font-size: 17px; line-height: 2; }
+    .note { padding: 24px 22px 26px; }
+    .archive { padding: 36px 20px 40px; }
+    .ch-sep { margin: 60px 0; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">
+      <div class="seal">藏</div>
+      <div class="brand-name">
+        <span class="brand-cn">藏书档案</span>
+        <span class="brand-en">PRIVATE BOOK ARCHIVE</span>
+      </div>
+    </div>
+    <div class="head-meta">唐家梁家 · 家传四种 · 书目五种</div>
+  </header>
+
+  <!-- ============ 页首 · 全站目录 ============ -->
+  <section class="top">
+    <div class="top-inner">
+      <div class="top-head">
+        <h1>桂林家人的自传</h1>
+        <p class="en">唐家梁家的故事 · Guilin Family Biographies</p>
+        <p class="url"><a href="https://tonytong.cc/guilin/">https://tonytong.cc/guilin/</a></p>
+      </div>
+      <div class="top-toc">
+        <div class="top-toc-label">目录 · TABLE OF CONTENTS (TOC)</div>
+        <ol>
+          <li>
+            <a class="row" href="#tongsam1">
+              <span class="idx">01</span>
+              <span class="body">
+                <span class="name">《从海武田飞出的歌：唐楚三的创业传奇》</span>
+                <span class="en">A Song Soaring from HaiWuTian - Guilin</span>
+              </span>
+              <span class="go">↓</span>
+            </a>
+          </li>
+          <li>
+            <a class="row" href="#tongsam2">
+              <span class="idx">02</span>
+              <span class="body">
+                <span class="name">唐楚三自传 · 《似水流年》</span>
+                <span class="en">Tong Cho Sam Autobiography</span>
+              </span>
+              <span class="go">↓</span>
+            </a>
+          </li>
+          <li>
+            <a class="row" href="/guilin/tangying/">
+              <span class="idx">03</span>
+              <span class="body">
+                <span class="name">唐星文 · 《梅花香自苦寒来》——我与我的亲人</span>
+                <span class="en">Tang Xingwen · 唐莹 TangYing</span>
+              </span>
+              <span class="go">→</span>
+            </a>
+          </li>
+          <li class="ext">
+            <div class="row">
+              <span class="idx">04</span>
+              <span class="cover"><img src="/guilin/images/AngelInvestor-Book-cover-VictorTong.jpg" alt="《天使投资》书封 · Angel Investment"></span>
+              <span class="body">
+                <span class="name">唐滔 · 《天使投资》</span>
+                <span class="en">Angel Investment — Victor Tong</span>
+                <span class="sub">《唐滔：如何成功解决创业者的融资问题》 · 浙江人民出版社</span>
+                <ul class="bullets">
+                  <li>国内首部天使投资的实战手册，堪称创业者的第一本书，打造创业者与天使投资人沟通的最佳桥梁。</li>
+                  <li>薛蛮子、徐小平、雷军、周鸿祎、孙陶然、但斌、曾玉、查立、杨宁、户才和、周哲、莫天全、《创业家》、《创业邦》等联袂推荐。</li>
+                  <li>作者唐滔结合他在美国和中国 17 年的创业和投资经历，为创业者和投资者提供了珍贵和可靠的第一手资料。</li>
+                  <li>创业者应何时融资？花多少时间去融资？如何获得融资者青睐？涵盖创业、成长、融资、退出、上市的全过程。</li>
+                  <li>书中首次提出了天使投资的三大本色：创新、识人、避险，深度剖析了国内外创业者与投资者的各种谎言与陷阱。</li>
+                </ul>
+                <span class="links">
+                  <a href="https://www.sohu.com/a/399788195_613239" target="_blank" rel="noopener">搜狐 · 书介</a>
+                  <a href="https://www.amazon.com/dp/B00935YTYG" target="_blank" rel="noopener">Amazon</a>
+                  <a href="https://chinacenter.umn.edu/umn-china/history/alumni/distinguished-alumni/victor-tong" target="_blank" rel="noopener">UMN 明尼苏达大学 · 杰出校友</a>
+                  <a href="https://baike.baidu.com/item/%E5%94%90%E6%BB%94/18667635" target="_blank" rel="noopener">百度百科</a>
+                </span>
+              </span>
+            </div>
+          </li>
+          <li class="ext">
+            <div class="row">
+              <span class="idx">05</span>
+              <span class="cover"><img src="/guilin/images/VT-Angel-Book.jpg" alt="Angel Investment Volume 1 English edition full cover spread — Victor Tong"></span>
+              <span class="body">
+                <span class="name">唐滔 Victor Tong · 《Angel Investment》英文版</span>
+                <span class="en">Angel Investment — Volume 1: The True Nature of Angel Investment</span>
+                <span class="sub">天使投资（第一卷：天使投资的本质） · A Calumet Editions Trade Paperback · ISBN 978-988-95481-0-8</span>
+                <ul class="bullets">
+                  <li>#1 BESTSELLER IN CHINA（中国畅销书第一名）</li>
+                  <li>封面标语：Learn How to Start Businesses, Innovate, Find Good People, Avoid Risks, Raise Money, Tell Truth from Lies, Do Due Diligence, Negotiate, Invest, and Succeed in China and the U.S. — 学会如何在中国与美国创业、创新、找对人、规避风险、融资、辨别真伪、尽职调查、谈判、投资并取得成功。</li>
+                  <li>"This book is a must read for anyone interested in angel investment in China or for entrepreneurs seeking angel investments. It draws upon the vast knowledge that the author developed from good and bad experiences navigating through the mine fields of angel investment in China and the U.S." — American Capital Markets</li>
+                  <li>"Mr. Tong has created a terrific resource for aspiring angel investors and seed stage entrepreneurs daring to play in the Wild, Wild East that is China." — Jim Chang, Managing Director, Mayfield Fund</li>
+                </ul>
+                <span class="links">
+                  <a href="https://www.amazon.de/-/en/Angel-Investment-True-Nature/dp/1939548101" target="_blank" rel="noopener">Amazon 英文版 · English Edition</a>
+                  <a href="https://www.amazon.com/dp/B00935YTYG" target="_blank" rel="noopener">Amazon 中文版 · 中文版</a>
+                  <a href="https://weibo.com/usavc" target="_blank" rel="noopener">Weibo</a>
+                  <a href="https://en.webplus.com" target="_blank" rel="noopener">en.webplus.com</a>
+                </span>
+                <span class="sub">Twitter: victong · Email: info@webplus.com</span>
+              </span>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero" id="tongsam1">
+    <div class="watermark" aria-hidden="true">歌</div>
+    <div><span class="chip">传记文学 · A BIOGRAPHY</span></div>
+    <h2 class="title-long">《从海武田飞出的歌：唐楚三的创业传奇》</h2>
+    <p class="title-en title-en-sm">- A Song Soaring from HaiWuTian - Guilin : Tong Cho Sam's Legend of Entrepreneurship</p>
+    <div class="divider"></div>
+    <p class="sub-en">Sub-title: Memoir &amp; literary work authored by Tong Cho Sam, copyright asset held by Tong Cho Sam Family Foundation</p>
+    <p class="sub-zh">副题：唐楚三撰写的文学回忆录，著作版权归属于唐楚三家族基金会</p>
+    <div class="divider"></div>
+    <p class="const-zh">唐楚三家族基金会 章程</p>
+    <p class="const-en">Tong Cho Sam Family Foundation - Family Constitution</p>
+  </section>
+
+  <section class="about">
+    <div class="about-inner">
+      <div class="sec-label">简介 · ABOUT THE BOOK</div>
+      <h2>香港实业家唐楚三的传记文学作品</h2>
+      <p class="zh">《从海武田飞出的歌》是记述香港实业家唐楚三的传记文学作品，由秦忠、陈妍如合著，1995 年由广西民族出版社出版。</p>
+      <p class="zh">青年作者秦忠和陈妍如撰写的传记文学《从海武田飞出的歌》(广西民族出版社 1995 年版)记叙了香港企业家唐楚三先生曲折坎坷的人生旅程及其与命运抗争的不屈精神，最终创造了辉煌的业绩，不断攀登事业的巅峰的感人故事。唐楚三的母亲是桂林大利实业公司的董事长。</p>
+      <p class="en">"A Song Soaring from HaiWuTian - Guilin" is a biographical account documenting the life of Tong Cho Sam (唐楚三 Tang ChuSan), a Hong Kong industrialist. Co-authored by Qin Zhong and Chen Yanru, it was published by Guangxi Ethnic Publishing House in 1995.</p>
+
+      <div class="blk">
+        <div class="blk-label">延伸阅读 · INSIDE THE BOOK</div>
+        <div class="blk-title">《从海武田飞出的歌》开篇的《序曲·母亲树》章节 以及全书的人物塑造核心内容</div>
+
+        <h3>《序曲·母亲树》完整片段细节</h3>
+        <p class="zh-sm">这是全书最具感染力的开篇章节，完全围绕唐楚三和母亲梁寿贞的最后相处展开：</p>
+        <p class="zh-sm">弥留之际的梁寿贞，强忍着身体的剧痛，和守在床边的唐楚三回忆童年往事：小时候母亲给他讲"辫婆娘"的民间故事，母子俩在兴安的河边捡彩色鹅卵石，唐楚三还会用笛子吹奏民间小调《卖菜》。</p>
+        <p class="zh-sm">母子二人都在刻意伪装轻松，母亲不想让儿子过度悲伤，唐楚三也强压着眼泪假装平静，两人都清楚最后的相聚时光已经所剩无几。</p>
+        <p class="zh-sm">唐楚三清晨捧着一束鲜花赶回病房时，母亲已经溘然长逝。身高 178 厘米、性格铁骨铮铮的他，完全无法接受这个残酷的现实，这段生离死别的描写是全书最催人泪下的段落。</p>
+
+        <h3>第一部分：海武田的童年根脉</h3>
+        <p class="zh-sm">抗战时期，身为广西学生军记者的梁寿贞在行军途中的农家生下唐楚三，取"楚虽三户，亡秦必楚"的寓意为他命名。因战事紧迫无法随军携带幼子，她将唐楚三送到广西兴安的海武田，交由外祖父母抚养。</p>
+        <p class="zh-sm">唐楚三的整个童年都在海武田的乡野间度过，跟着外祖父母在田埂间劳作、在河边捡彩色鹅卵石、跟着乡间艺人学吹笛子，这段无拘无束的山野生活，塑造了他后来坚韧不拔的性格，也成为书名"从海武田飞出的歌"的精神源头。</p>
+
+        <h3>第二部分：青年时期的人生重创</h3>
+        <p class="zh-sm">唐楚三长成 178 厘米的铁骨青年，和母亲梁寿贞感情极深。梁寿贞后来成为小学校长，母子二人相依为命，母亲给他讲民间故事、教他读书写字，是他人生中最重要的精神支柱。</p>
+        <p class="zh-sm">但命运突降重击，梁寿贞身患重病，弥留之际还强忍着剧痛和儿子回忆童年往事，刻意伪装轻松不想让他悲伤。直到唐楚三捧着鲜花赶回病房，才发现母亲已经溘然长逝，这个打击成为他人生中最沉重的转折点，也让他彻底明白人生的残酷，决心靠自己的双手闯出一条路。</p>
+
+        <h3>第三部分：半生坎坷的底层打拼</h3>
+        <p class="zh-sm">离开家乡后，唐楚三辗转多地谋生，人生旅程充满数不清的坎坷：他做过最底层的体力活、遭遇过事业破产、被合作伙伴背叛，多次跌入人生谷底。但他始终没有向命运低头，凭借极强的心理素质和海武田乡野赋予的韧性，一次次从废墟里重新站起来，在摸爬滚打中积累了大量商业经验和人脉资源。</p>
+
+        <h3>第四部分：赴港创业的事业巅峰</h3>
+        <p class="zh-sm">他最终选择前往香港发展，在完全陌生的环境里从零起步，从最微小的生意做起，在激烈的市场竞争中步步为营，一步步搭建起自己的商业版图，最终成为香港知名的企业家，真正实现了"从海武田飞出"的人生跨越。</p>
+        <p class="zh-sm">全书没有把他塑造成天生的商业天才，而是完整刻画了他作为"自我实现的人"的成长轨迹，完全契合人本主义心理学家马斯洛提出的"人类精英、出类拔萃之辈"的人格标准，他的奋斗故事也成为普通人突破命运局限的典型样本。</p>
+
+        <h3>全书核心人物塑造细节</h3>
+        <p class="zh-sm">作者秦忠、陈妍如没有把唐楚三塑造成天生的商业天才，而是重点刻画他作为"自我实现的人"的完整人格：他拥有极强的心理素质，在人生每一次跌入谷底时，都能凭借韧性重新站起来，完全契合人本主义心理学家马斯洛提出的"人类精英、出类拔萃之辈"的人格标准。</p>
+        <p class="zh-sm">全书用大量篇幅描写他在底层打拼时的诸多具体困境：多次遭遇事业破产、被合作伙伴背叛、在香港创业初期连落脚的地方都没有，每一次他都没有向命运低头，一步步从最底层的小生意做起，最终搭建起自己的商业版图。</p>
+        <p class="zh-sm">书中还穿插了大量广西兴安海武田的乡野生活细节，把童年的乡土经历和他后来坚韧不拔的性格形成做了深度关联，解释了"从海武田飞出的歌"这个书名的深层含义：他的精神根脉始终扎根在海武田的土地里，最终像歌声一样飞出山野，抵达更广阔的世界。</p>
+
+        <div class="note">1996 年《南方文坛》的文学评论节选内容、全书其余章节的完整故事，详见广西民族出版社 1995 年出版的实体书——《南方文坛》</div>
+      </div>
+      <div class="meta-chips">
+        <span>广西民族出版社</span>
+        <span>1995 年</span>
+        <span>传记文学 Biography</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="gallery-inner">
+      <figure>
+        <span class="photo" style="width:min(900px,100%)"><img src="images/HaiWuTian-book1.jpg" alt="《从海武田飞出的歌》书封展开，含前后封面与书脊" loading="lazy"></span>
+        <figcaption>01 · 书封 Book Cover</figcaption>
+      </figure>
+      <figure>
+        <span class="photo" style="width:min(520px,100%)"><img src="images/HaiWuTian-book2.jpg" alt="《从海武田飞出的歌》封面、目录与内页书影" loading="lazy"></span>
+        <figcaption>02 · 书影 Book &amp; Contents</figcaption>
+      </figure>
+      <figure>
+        <span class="photo" style="width:min(900px,100%)"><img src="images/HaiWuTian-book3.jpg" alt="《从海武田飞出的歌》第二章内页跨页" loading="lazy"></span>
+        <figcaption>03 · 内页 Inner Pages</figcaption>
+      </figure>
+      <figure>
+        <span class="photo" style="width:min(900px,100%)"><img src="images/HaiWuTian-book4.jpg" alt="《从海武田飞出的歌》全书目录" loading="lazy"></span>
+        <figcaption>04 · 目录 Table of Contents</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ PART TWO · 似水流年 ============ -->
+  <section class="part" id="tongsam2">
+    <div class="watermark2" aria-hidden="true">似</div>
+    <div class="kicker">新作 · NEW WORK</div>
+    <h2>似水流年</h2>
+    <p class="sub">唐楚三自传 · Tong Cho Sam Autobiography</p>
+    <p class="meta">2025 年 11 月 26 日<span class="dot">·</span>唐楚三自传（2025 增补版 TTv1）</p>
+  </section>
+
+  <section class="memoir">
+    <div class="memoir-inner">
+
+      <nav class="toc">
+        <div class="toc-title">目次 · CONTENTS</div>
+        <ul>
+          <li><a href="#preface"><span class="n">前言</span>Preface</a></li>
+          <li><a href="#ch1"><span class="n">第一章</span>烽火问世 · 1941 年的生命序章</a></li>
+          <li><a href="#ch2"><span class="n">第二章</span>家族溯源 · 唐氏家族与梁氏家族的岁月传承</a></li>
+        </ul>
+      </nav>
+
+      <!-- 前言 -->
+      <article class="chapter" id="preface">
+        <header class="ch-head">
+          <div class="rule"></div>
+          <div class="n">PREFACE</div>
+          <h3>前言</h3>
+        </header>
+        <p>2025 年 11 月 21 日深夜，夜色已深，窗外万籁俱寂，我与唐仪及家人围坐在灯下，暖意融融。闲谈间，我们聊起了当下的科技发展，聊到了豆包这款先进的软件，忽然萌生了一个念头——用豆包辅助，再写一本自传。</p>
+        <p>此前，我已有《海武田飞出的歌》这本自传问世。那时候，我正忙于生意场上的奔波，每日周旋于谈判、建厂、拓展业务之间，分身乏术。动笔写那本书时，多是抽空熬夜赶稿，精力有限，加之当时的环境与心境，书中只记录了部分人生片段，许多真实的、重要的内容都未能提及，成了我心中多年的遗憾。比如唐氏家族与梁氏家族的渊源脉络、祖辈的事迹与家风传承，比如我从出生到如今这八十余载，是如何在时代的浪潮中成长、挣扎、奋斗、坚守，比如那些陪伴我走过一程又一程的亲友、那些改变我人生轨迹的机遇与挑战，还有周遭世事的变迁，以及我为家族、为行业、为自己所做的那些选择与坚持……这些，在《海武田飞出的歌》中都未曾详尽交代。</p>
+        <p>如今，我已步入耄耋之年，不再有当年生意场上的繁杂与忙碌，有了充足的时间回望过往。而豆包这款软件，便捷、高效，能帮我梳理记忆、打磨文字，让我得以从容地将那些尘封在岁月里的往事一一拾起，如实记录。我想，这本新的自传，不仅是对我自己一生的完整复盘，更是对过往岁月的致敬，对家族历史的传承。把这些我亲身经历、亲眼所见、亲耳所闻的事情记录下来，对于后人了解我们唐氏家族、梁氏家族的过往，了解那个特殊年代里一个普通人的人生轨迹与时代印记，或许会有一些帮助。这，便是我下定决心再写这本自传的初心与动因。</p>
+        <p>本书将围绕十个章节展开，每一个章节都是一段岁月的缩影，每一段文字都是心底最真实的倾诉。我力求还原那些过往的细节，不夸大、不隐瞒，用最朴实的语言，讲述最真实的人生，愿借此书，让后人读懂那段岁月，读懂我的一生。</p>
+      </article>
+
+      <div class="ch-sep">◆ ◆ ◆</div>
+
+      <!-- 第一章 -->
+      <article class="chapter" id="ch1">
+        <header class="ch-head">
+          <div class="rule"></div>
+          <div class="n">第一章 · CHAPTER ONE</div>
+          <h3>烽火问世</h3>
+          <p class="sub">1941 年的生命序章</p>
+        </header>
+
+        <p>1941 年，烽火灼遍华夏，我的生命序章，便在这狼烟四起的岁月里悄然翻开。这一年 3 月 16 日下午四点左右，老河口的风里还裹着未散的硝烟味，一声稚嫩的啼哭划破军营的沉寂——我，来到了这个饱经战乱的人间。妈妈挣扎着抬手，让身边的勤务兵推开窗，晚风裹挟着山野的清冽涌进来，捎来一树桃花的艳影，粉白的花瓣在风里轻轻颤动，像是在硝烟中倔强绽放的希望。往后每一年，妈妈都会从家乡寄来一束压干的桃花，那细碎的粉，便是烽火岁月里，我生日最温柔也最坚韧的印记。</p>
+
+        <p>彼时，抗日战争正打得如火如荼，第五战区的将士们驻守在湖北老河口一带，枕戈待旦，与日寇殊死抗衡。时任第五战区司令官的李宗仁将军，正坐镇于此，运筹帷幄，指挥着一场场浴血奋战。我的妈妈，既是北上抗日学生军的一员，怀揣着"天下兴亡，匹夫有责"的赤诚，亦是第五战区《阵中日报》的记者——她握过笔，也扛过枪，用文字记录下将士们的热血与牺牲，用脚步丈量着战场的苦难与坚守。这份《阵中日报》，后来随国民党撤退至台湾，诸多泛黄的版面、斑驳的稿件，都被妥善珍藏在台北的博物馆中；多年后马英九任职期间，查阅到这份报纸的相关史料，特意为当年的记者梁寿贞颁发了证章、纪念章与纪念证书，顺带也找到了妈妈当年身着军装、手持钢笔的照片——照片里的她，眉眼坚毅，目光灼灼，藏着那个年代女战士独有的飒爽与温情。</p>
+
+        <p>也正因妈妈的身份，我出世后便成了军营里的"小福星"，被一众将士捧在手心。从我一岁抓周的照片里，仍能窥见当时的模样：军营的土坯房里，墙壁上还留着炮弹碎片划过的痕迹，角落里堆着几捆军粮，空气中混杂着煤油、硝烟与淡淡的桃花香。按照中国的传统习俗，孩子周岁要办抓周宴，战友们特意凑了些物件，忙前忙后地布置——粗糙的木板床上铺着一块洗得发白的军毯，上面摆着各式各样的小玩意儿：用铁皮敲成的小火车、裹着粗布的小汽车、用硬纸糊的小飞机、缝补过的布偶，还有一枚磨得发亮的大洋、一个边角光滑的旧算盘。</p>
+
+        <p>我被妈妈轻轻放在军毯中央，身上裹着战友们凑的碎花小被子，懵懂地眨着眼睛，看着周围穿着军装、面带笑意的叔叔伯伯们。他们压低了声音，生怕惊扰了我，眼里却满是期待。片刻的愣神后，我伸出胖乎乎的小手，右手一把攥住那枚冰凉的大洋，不等众人反应，便凑到嘴边，用没长齐的小牙轻轻咬着，银亮的大洋沾了些许口水；左手也不闲着，摸索着抓住了那个旧算盘，小手指胡乱地拨弄着算珠，"噼里啪啦"的轻响，在寂静的土坯房里格外清晰。</p>
+
+        <p>这一幕瞬间打破了军营的肃穆，将士们先是一愣，随即爆发出低低的笑声，有人拍着大腿打趣："好家伙！这小娃娃，一手抓钱，一手算账，将来定是能掌大印、发大财的主儿！"还有人笑着凑过来，轻轻捏了捏我的脸蛋："不愧是我们军营里的小宝贝，连抓周都这么有福气！"妈妈坐在一旁，看着我咬着大洋、拨着算盘的模样，眼里满是温柔，嘴角噙着笑意，只是那笑意深处，藏着一丝对乱世的忧虑，也藏着对我未来的期许。这张照片，就这样定格了烽火中的温情——土坯房、旧军装、发亮的大洋、老旧的算盘，还有我懵懂的模样，每一处细节，都是那个年代最真实的写照。</p>
+
+        <p>那个年代，战火纷飞，物资极度匮乏，能吃上一顿饱饭已是奢侈，更不必说拍照留念。可我却格外幸运，每隔一两个月，就有战友借着外出的机会，找镇上的照相馆给我拍一张照片；周岁抓周这样的仪式，更是倾尽了众人的心意。我至今记得，小时候有一双银筷子、一个银瓢羹，手脚上还戴着圆滚滚的银镯，银器被磨得发亮，上面用小刀细细刻着"楚三周岁纪念"六个小字，笔画虽不工整，却字字皆是妈妈的心血。每逢行军，妈妈总会把这些银器小心翼翼地收在布包里，哪怕自己吃苦受累，也绝不会让它们有半点损伤。</p>
+
+        <p>而我的名字"唐楚三"，更是藏着妈妈深沉的家国情怀与乱世中的坚定信念。"楚三"二字，源自春秋战国时期的典故——彼时秦国横扫六合，势不可挡，楚国覆灭之际，民间流传着一句悲壮的民谣："楚虽三户，亡秦必楚。"这句民谣，是绝境中的呐喊，是不屈的誓言，意为即便楚国只剩三户人家，最终推翻秦国统治的，也必定是楚国。妈妈给我取这个名字，既是因我生于 1941 年 3 月，更因当时的中国，正深陷日寇侵略的绝境，国土沦陷，生灵涂炭，如同当年濒临覆灭的楚国。可妈妈始终坚信，中华民族从未屈服，正如"亡秦必楚"一般，即便前路艰险，即便牺牲无数，最终打败日本侵略者、收复家国山河的，必定是中国。</p>
+
+        <aside class="note">
+          <div class="note-title">史料 · 「楚虽三户，亡秦必楚」的历史背景</div>
+          <div class="note-lead">据资料详细记载了这段历史。</div>
+
+          <div class="lbl">一、楚国与秦国的恩怨</div>
+          <p>楚国是战国七雄中疆域最广、实力雄厚的诸侯国，与秦国长期对峙。战国后期，秦国推行"远交近攻"策略，楚襄王时期秦国攻破楚都郢城，屈原投江；楚考烈王时楚国多次联合诸侯抗秦仍败，最终于公元前 223 年被王翦率军灭亡。秦国灭楚过程中手段残酷，楚地百姓对秦恨之入骨，楚南公的预言正是这种复仇情绪的集中体现。</p>
+
+          <div class="lbl">二、"三户"的核心含义</div>
+          <p>主流史学界认为"三户"指楚国三大贵族——昭氏、屈氏、景氏（均为楚国王族分支），这三族世代执掌楚国大权，在楚地拥有极高威望和号召力，是楚国反抗力量的象征；也有观点认为"三户"是虚指，意为哪怕只剩几户人家，楚人也誓要灭秦，凸显反抗的决绝。</p>
+
+          <div class="lbl big">三、预言应验的过程</div>
+          <div class="lbl">1. 陈胜吴广起义（楚地首发）</div>
+          <p>公元前 209 年，陈胜、吴广在大泽乡（原楚地）起义，打出"张楚"（复兴楚国）旗号，迅速得到楚地百姓响应，揭开反秦序幕。陈胜虽最终失败，但点燃了全国反秦烈火，且起义核心力量多为楚人。</p>
+          <div class="lbl">2. 项氏集团扛起楚旗</div>
+          <p>楚国贵族后裔项梁、项羽在吴中起兵，拥立楚怀王之孙熊心为"楚怀王"，以楚的名义集结反秦力量，成为反秦主力。项羽在巨鹿之战中破釜沉舟，击败秦军主力，彻底摧毁秦国军事根基。</p>
+          <div class="lbl">3. 刘邦入关灭秦</div>
+          <p>刘邦出身沛县（原楚地），率部攻入咸阳，秦王子婴投降，秦朝正式灭亡。刘邦的核心团队（萧何、曹参、樊哙等）均为楚人，最终完成了"亡秦"的目标，印证了"楚虽三户，亡秦必楚"的预言。</p>
+          <p>简单来说，反秦起义的发起、核心力量、最终灭秦的关键人物均与楚地、楚人深度绑定，让这句预言成为现实。</p>
+        </aside>
+
+        <p>烽火愈烈，前线的战事愈发吃紧，妈妈深知，军营不是久留之地，枪林弹雨里，她无法护我周全。深思熟虑后，她下定决心，要把我送回广西兴安海武田的老家，托付给外公抚养。</p>
+
+        <p>临行那日，老河口的晨雾裹着硝烟，沉甸甸地压在天地间。妈妈身着熨烫平整的军装，骑在一匹高大的白马上，身姿挺拔，只是眉眼间藏着难掩的不舍。身后，一位副官挎着枪，步履沉稳地随行护卫；一名勤务兵挑着一副旧扁担，两头的布包袱鼓鼓囊囊，里面裹着我的衣物、那套刻着名字的银器，还有妈妈攒下的微薄积蓄，每一件都捆扎得紧实，是她能给我的全部牵挂。</p>
+
+        <p>没有车辙，没有坦途，唯有坑坑洼洼的土路，在战火蹂躏过的土地上蜿蜒向南方。他们一路跋山涉水，避开纷飞的炮火，绕过沦陷的城镇，白日里顶着烈日或寒风赶路，夜晚就宿在破庙、驿站，或是老乡家的柴房。白马的蹄声踏过泥泞，溅起满身尘土；勤务兵的扁担在肩头晃悠，磨出深深的红痕；妈妈怀里的我，懵懂地靠在她胸前，听着马蹄声、风声，还有远处偶尔传来的枪炮声，在颠簸中昏昏欲睡。</p>
+
+        <p>不知走了多少日夜，越过多少山岭，终于抵达广西兴安海武田。彼时我刚满两岁，对这段漫漫归途毫无记忆，只知道当妈妈抱着我站在外公家门口时，眼前是青瓦土墙的老屋，身后是连绵的青山，风里没有了硝烟味，只有泥土与草木的清香。妈妈把我交到外公手里，千叮咛万嘱咐，转身时，我分明看见她抹了抹眼角——那是烽火岁月里，一个母亲最无奈也最深情的告别。</p>
+
+        <p>从两岁到四岁，我在海武田度过了两年安稳时光。远离了前线的枪炮轰鸣，没有了军营的肃杀气息，这里的日子缓慢而平和。可我知道，这份安稳，是妈妈用牵挂与坚守换来的，是烽火乱世里，给我撑起的一片小小晴空。我的生命，一半浸着前线的狼烟，一半沐着故乡的烟火，在家国飘摇的岁月里，悄然生长。</p>
+
+        <div class="archive">
+          <div class="archive-label">档案 · ARCHIVE</div>
+          <figure>
+            <span class="photo pending" data-file="IMG_0362.JPG" style="width:min(460px,100%)"><img src="images/IMG_0362.JPG" alt="抓周：唐楚三抓起银元（1942）" loading="lazy" onload="this.parentNode.classList.remove('pending')"></span>
+            <figcaption>05 · 抓周：唐楚三抓起银元（1942）</figcaption>
+          </figure>
+          <figure>
+            <span class="photo pending" data-file="d41756ae371bf9e6932396bccdd1507c.JPG" style="width:min(560px,100%)"><img src="images/d41756ae371bf9e6932396bccdd1507c.JPG" alt="中華民國抗戰勝利紀念章證明書" loading="lazy" onload="this.parentNode.classList.remove('pending')"></span>
+            <figcaption>06 · 中華民國抗戰勝利紀念章證明書</figcaption>
+          </figure>
+          <figure>
+            <span class="photo pending" data-file="IMG_4442.JPG" style="width:min(460px,100%)"><img src="images/IMG_4442.JPG" alt="档案照片" loading="lazy" onload="this.parentNode.classList.remove('pending')"></span>
+            <figcaption>07 · 档案照片 Archive Photograph</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <div class="ch-sep">◆ ◆ ◆</div>
+
+      <!-- 第二章 -->
+      <article class="chapter" id="ch2">
+        <header class="ch-head">
+          <div class="rule"></div>
+          <div class="n">第二章 · CHAPTER TWO</div>
+          <h3>家族溯源</h3>
+          <p class="sub">唐氏家族与梁氏家族的岁月传承</p>
+        </header>
+
+        <p>我父亲的父亲应该叫爷爷，当时是清朝的七品武官。当时交通很落后，爷爷从广西富川走路走了一个月到北京去考武官。在考场他把一个石头的狮子举起来，举过头，考取了当时清朝的七品武官。我父亲呢，叫唐姚宋，父亲年轻的时候应该是比较上进的青年。他追求母亲的时候，到了海武田，是漓江的上游，冬天在河里去洗澡。当年毛泽东在井冈山闹革命，父亲得到消息嘛，就邀了朋友两个人就一起去井冈山，走路去的，去投靠井冈山。但是半路就给国民党抓住了，以政治犯关进了监狱，在监狱呢度过了 6 年。据父亲说嘛，那 6 年嘛，每隔一两天就有一个尸体拉出去，死了很多人。父亲呢每天吃了饭了就在那小小的监狱，围着圈圈就不断地走路打圈。这样紧走紧走，在监狱的最尾处有个小小的窗子，开在天花板那里，父亲呢就对在那里呢，就不断地呼吸新鲜空气，这样保了一条小命。到七七，西安事变，张学良就逮困了蒋介石，要全国统一抗战，全国国共合作，全国释放政治犯。这样的父亲就在那个机会就给释放出来。可是在国民党里已经坐了 6 年的牢。</p>
+
+        <p>到了 1957 年，父亲在桂林一中当老师。当时的校长是何勇，是何时的何，勇是勇敢的勇。他非常的激进。根据毛主席所说的，每个单位有 95% 的基本群众都是好的，是革命群众；每个单位有 5% 的是坏蛋，是反革命。当时何勇呢，就把他手下的人就找 5% 的人来，就看哪个老是不敢反抗，就找到我父亲，而且用花言巧语就骗他，就说要你去劳动改造，是保留公职，保留工资，只不过上班地方不同。你现在在桂林一中当老师，你现在去劳动改造，去改造思想，工资也不变，你家嘛还是可以住在一中。这样子父亲给他花言巧语骗了，就签了字。后来就到劳动农场去改造，第一个月就发了工资，第二个月就不发了。什么反革命还要发工资，去劳动改造了，就不发工资，而且也不准我们家住在一中，就赶了出来。父亲说：共产党的牢啊，比国民党的牢难坐多。白天呢要从事非常艰苦的劳动，吃的又差，这晚上了要挨批斗，要写悔过书，要思想改造，思想压力很重。和我父亲一起去的有 7 个老师，有 5 个老师呢，才不到半年的时间，就受不出那种艰苦的劳动和思想压力，就死掉了。那我父亲有坐国民党的牢的经验，就想得开，就保了一条小命。</p>
+
+        <p>当时我在北京读大学，全国嘛都是生活质量非常差，连大米饭都没，都不能吃饱，都没得吃。所有的副食品啊，蛋啊、糖啊、饼干，通通没有。我在北京读书，只有北京在街上可以买得到糖。那个糖呢是软糖，有大拇指那么大一颗，有奶油，好像非常有营养。我呢是穷学生，也没有钱，只能买来一斤半。在食堂能吃到馒头和窝窝头，这两样食物在当时的广西十分少见。北京气候干燥，我便把馒头和窝窝头切片，拿到天台上晾晒。经过三天晾晒，它们变成了干硬干爽的片片，我连同一点糖一起打包，从北京航空寄往桂林。那时邮局效率不高，邮件寄到桂林需要 15 天以上。桂林气候潮湿，等包裹送达时，馒头和窝窝头已经发霉了。妈妈用毛巾擦掉霉斑，加水煮成糊糊食用，以此勉强果腹。至于那点糖，妈妈格外珍惜。当时爸爸正在广西玉林劳改农场，她特意带着糖去农场探望，叮嘱爸爸："这糖是孩子在北京买的，全国只有北京能买到，千万别告诉别人，藏好它。"此后爸爸每天睡前吃两颗，靠着这点糖补充营养、缓解饥饿，艰难维系着生命。1967 年，爸爸终于从劳改农场释放。我是 1965 年大学毕业，而爸爸出狱后没有工作、没有工资，成了无生活来源的流民。我当时大学毕业被分配到昆明郊区工作，当地物资供应匮乏，我工资几乎全用在吃饭上，营养匮乏却仍咬牙坚持工作。即便如此，我每个月都会寄 20 块钱回家——当时国内学徒工月薪 18 块，一级工月薪 20 块，这笔钱让爸爸能享受到一级工的待遇，帮家人熬过了那段艰难岁月。</p>
+
+        <p>我的母亲梁寿贞出生于 1915 年，16 岁时离开山区前往桂林市，随后加入北上的抗日学生军，在李宗仁领导的第五战区担任《阵中日报》（"阵"为阵地的阵，"中"为中国的中）记者。1941 年 3 月 16 日，母亲生下了我。我 2 岁时，被送到海武田交给外公梁月春抚养，4 岁时从海武田被接到桂林市。</p>
+
+        <p>彼时日本鬼子已占领桂林，这座城市沦为一片废墟，连一间完好的房子都没有。母亲在桂林风洞山拐弯的十字路口摆下四块砖，划定了属于我们的地盘。外公从海武田砍来大量竹子和树木，扎成竹排从漓江顺流而下，抵达桂林风洞山码头后运上岸，就在四块砖的位置建起了一座两层楼房——在当时那条街上，这座两层楼算是较好的房子，周边多是低矮的平房。</p>
+
+        <p>我在二楼亲眼目睹了解放前夕的一幕：国民党军官骑着大马在前引路，身后士兵五花大绑着一位共产党员，再后面跟着大批国民党兵，从家门口押往观音阁枪毙。那时的观音阁是桂林市最北端，之外便是田野、荒地和农地，如今已成为市中心，大马路四通八达，高楼大厦一直延伸到灵川。当时那位共产党员不断呼喊，士兵用毛巾堵住他的嘴，将其拖到观音阁处决。事后不少老百姓上前搜查他的口袋，想找手表、钢笔之类的东西，我们小孩子则围过去看热闹，亲眼见到被枪毙的人胸前有一个洞，场面十分可怕。</p>
+
+        <p>1949 年，共产党解放军到来，国民党军队未作抵抗便慌忙逃跑，期间有四五个小时的"真空期"。当时我看到很多人趁机抢夺国民党的仓库，有人滚走汽车轮胎，有人抢走布匹，场面混乱不堪。四五个小时后，解放军抵达，见我家房屋宽敞且空荡，便在一楼驻扎了一排士兵。后来，我的父母亲到汉民中学（即现在的桂林第一中学）任教，学校位于桂林穿山脚下。我们全家从风洞山的家中收拾了床、被子、板凳等家具，租了一艘船从风洞山码头出发，顺江而下后拐入小东江，抵达穿山脚下安顿下来，我在那里度过了七八岁的时光。</p>
+
+        <p>母亲梁寿贞兄弟姐妹中排行老大，如今在世的仅有五人。老二梁基栋于 1953 年毕业于广西大学化工系；老三梁基冠现居台湾，后续我会专门介绍他的情况；老四是梁基定，老五是梁基兴。此外，母亲还有两位妹妹，分别叫梁晚贞、梁莲贞。梁晚贞（"晚"为晚上的晚，"贞"为贞洁的贞）不到 30 岁便过世了——当年外公患有严重的肺结核，在那个年代，肺结核是不治之症且传染性极强，晚贞不幸被传染，英年早逝。梁莲贞我曾见过，她长得十分漂亮，身高约 1 米 63，脸上有小小的雀斑，还有两个好看的酒窝，模样堪比民国四大美女之一的林徽因。她当时参加了桂北游击队，投身共产党的革命事业，与国民党展开斗争，遗憾的是也染上了肺结核，18 岁左右便离世了。因此，母亲这边的梁氏家族，如今在世的仅有梁寿贞、梁基栋、梁基冠、梁基定、梁基兴五人。</p>
+
+        <h4 class="sub-head">梁氏家风：乡贤风骨，仁心济世</h4>
+
+        <div class="to-continue">本章后续内容待补 · To be continued</div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ 附录 · 宽心谣 ============ -->
+  <section class="kx" id="kuanxin">
+    <div class="kx-inner">
+      <div class="kx-head">
+        <div class="rule"></div>
+        <div class="kx-kicker">附录 · APPENDIX</div>
+        <h2 class="kx-title">宽心谣</h2>
+        <p class="kx-by">中国佛教协会会长 赵朴初 · 九十二岁高龄所作</p>
+      </div>
+      <div class="kx-card">
+        <div class="kx-poem">
+          <div class="kx-st">
+            <p class="kx-l">日出东海落西山，</p>
+            <p class="kx-p"><b>喜</b>也一天，</p>
+            <p class="kx-p"><b>忧</b>也一天；</p>
+          </div>
+          <div class="kx-st">
+            <p class="kx-l">恩恩怨怨随风卷，</p>
+            <p class="kx-p"><b>天</b>也无边，</p>
+            <p class="kx-p"><b>地</b>也无边；</p>
+          </div>
+          <div class="kx-st">
+            <p class="kx-l">茫茫四海人无数，</p>
+            <p class="kx-p"><b>早</b>也忙碌，</p>
+            <p class="kx-p"><b>晚</b>也忙碌；</p>
+          </div>
+          <div class="kx-st">
+            <p class="kx-l">人生似鸟同林宿，</p>
+            <p class="kx-p"><b>退</b>也一步，</p>
+            <p class="kx-p"><b>进</b>也一步；</p>
+          </div>
+          <div class="kx-st">
+            <p class="kx-l">功禄财气顺自然，</p>
+            <p class="kx-p"><b>来</b>也罢了，</p>
+            <p class="kx-p"><b>去</b>也罢了；</p>
+          </div>
+          <div class="kx-st">
+            <p class="kx-l">为人处世眼界宽，</p>
+            <p class="kx-p"><b>高</b>也和善，</p>
+            <p class="kx-p"><b>低</b>也和善；</p>
+          </div>
+          <div class="kx-st">
+            <p class="kx-l">遇事不钻牛角尖，</p>
+            <p class="kx-p"><b>人</b>也舒坦，</p>
+            <p class="kx-p"><b>心</b>也舒坦；</p>
+          </div>
+          <div class="kx-st">
+            <p class="kx-l">居室好歹不高攀，</p>
+            <p class="kx-p"><b>大</b>也栖身，</p>
+            <p class="kx-p"><b>小</b>也栖身；</p>
+          </div>
+          <div class="kx-st">
+            <p class="kx-l">旧衣新衫不挑拣，</p>
+            <p class="kx-p"><b>好</b>也御寒，</p>
+            <p class="kx-p"><b>赖</b>也御寒；</p>
+          </div>
+          <div class="kx-st">
+            <p class="kx-l">夫妻厮守互慰勉，</p>
+            <p class="kx-p"><b>贫</b>也相安，</p>
+            <p class="kx-p"><b>富</b>也相安；</p>
+          </div>
+          <div class="kx-st">
+            <p class="kx-l">少荤多素日三餐，</p>
+            <p class="kx-p"><b>粗</b>也香甜，</p>
+            <p class="kx-p"><b>细</b>也香甜；</p>
+          </div>
+          <div class="kx-st">
+            <p class="kx-l">领取薪金有几许，</p>
+            <p class="kx-p"><b>多</b>也无怨，</p>
+            <p class="kx-p"><b>少</b>也无怨；</p>
+          </div>
+          <div class="kx-st">
+            <p class="kx-l">不义之财不可取，</p>
+            <p class="kx-p"><b>进</b>也是祸，</p>
+            <p class="kx-p"><b>出</b>也是祸；</p>
+          </div>
+          <div class="kx-st">
+            <p class="kx-l">花开能有几时红，</p>
+            <p class="kx-p"><b>爱</b>也兮兮，</p>
+            <p class="kx-p"><b>恨</b>也兮兮；</p>
+          </div>
+          <div class="kx-st">
+            <p class="kx-l">喜逢好友聊聊天，</p>
+            <p class="kx-p"><b>古</b>也谈谈，</p>
+            <p class="kx-p"><b>今</b>也谈谈；</p>
+          </div>
+          <div class="kx-st">
+            <p class="kx-l">早晚操劳勤锻炼，</p>
+            <p class="kx-p"><b>忙</b>也乐观，</p>
+            <p class="kx-p"><b>闲</b>也乐观；</p>
+          </div>
+          <div class="kx-st">
+            <p class="kx-l">莫为体态费心悬，</p>
+            <p class="kx-p"><b>胖</b>也美观，</p>
+            <p class="kx-p"><b>瘦</b>也美观；</p>
+          </div>
+          <div class="kx-st">
+            <p class="kx-l">邻里亲朋广积善，</p>
+            <p class="kx-p"><b>老</b>也不嫌，</p>
+            <p class="kx-p"><b>少</b>也不嫌；</p>
+          </div>
+          <div class="kx-st">
+            <p class="kx-l">骨肉亲情常祝愿，</p>
+            <p class="kx-p"><b>朝</b>也平安，</p>
+            <p class="kx-p"><b>夕</b>也平安；</p>
+          </div>
+          <div class="kx-st">
+            <p class="kx-l">心宽体健养天年，</p>
+            <p class="kx-p"><b>不</b>是神仙，</p>
+            <p class="kx-p"><b>胜</b>似神仙。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="main">Copyright 2026 <a href="https://tonytong.cc" style="color:inherit;text-decoration:underline;">TonyTong.cc</a> 唐仪 · 私人藏书 Private Collection</div>
+    <div class="sub">本页未收录于主页导航 · Unlisted page</div>
+  </footer>
+
+</div>
+</body>
+</html>
