@@ -16,7 +16,9 @@ Tony Tong (唐仪) 的个人官方网站源码 —— 静态站点，托管于 C
 ## 技术说明
 
 - 纯静态 HTML / CSS / JavaScript，无构建步骤
-- 部署方式：Cloudflare Pages 直传（`wrangler pages deploy`），项目名 `tonytong`
+- 部署方式：Cloudflare Pages 项目 `tonytong`，**已连接本仓库 `com1010/tonytong` 的 `main` 分支（Git 自动构建）** —— 向 `main` push 即自动发布
+- Pages 构建设置：Framework = None，Build command 留空，Build output directory 留空（仓库根目录即站点根目录）
+- 也可手动直传：`npx wrangler pages deploy . --project-name=tonytong --branch=main --commit-dirty=true`
 - 图片资源位于 `assets/` 与 `guilin/images/`
 
 ## 相关站点
