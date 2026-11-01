@@ -218,6 +218,25 @@
   .about ul.toc-list .toc-subs { display: block; margin-top: 2px; font-size: 14.5px; letter-spacing: .5px; color: var(--ink-mute); }
 
   /* ---------- Gallery ---------- */
+  /* ---------- Ballet frame (Laurencia) ---------- */
+  .ballet-frame {
+    max-width: 820px; margin: -44px auto 96px; padding: 34px 38px 30px;
+    border: 1.5px solid var(--vermillion); border-radius: 4px; background: var(--card);
+    box-shadow: 0 14px 30px -8px rgba(28,23,18,.12);
+    position: relative; text-align: left;
+  }
+  .ballet-frame::before {
+    content: ""; position: absolute; inset: 7px; pointer-events: none;
+    border: 1px dashed rgba(185, 58, 27, .45); border-radius: 2px;
+  }
+  .ballet-frame-label { font-size: .8rem; letter-spacing: 3px; color: var(--vermillion); font-weight: 700; margin-bottom: 12px; }
+  .ballet-frame h3 { font-size: 1.35rem; margin: 0 0 4px; color: var(--ink); }
+  .ballet-frame .ballet-sub { font-size: 1.02rem; color: var(--ink-mute); margin: 0 0 16px; }
+  .ballet-frame p { font-size: 16px; line-height: 1.95; color: var(--ink-soft); margin: 0 0 12px; text-align: justify; }
+  .ballet-frame p strong { color: var(--ink); }
+  .ballet-frame h4 { font-size: 1.08rem; color: var(--vermillion); margin: 22px 0 10px; padding-top: 16px; border-top: 1px solid var(--line); }
+  .ballet-frame .ballet-cn { font-family: 'Noto Serif SC','cwTeXQKai',serif; color: var(--ink-mute); }
+
   .gallery {
     background: var(--paper-deep);
     padding: 96px 24px 110px;
@@ -726,8 +745,26 @@
       </figure>
       <figure>
         <span class="photo" style="width:min(900px,100%)"><img src="images/TangYing-ZhouEnLai-1958.jpg" alt="1958 年周恩来总理接见唐楚三的大姐唐莹主演的芭蕾舞剧《西班牙的女儿》全体演员（总理左侧为唐莹）" loading="lazy"></span>
-        <figcaption>06 · 1958 年周恩来总理接见唐莹演出合影 Zhou Enlai &amp; Tang Ying, 1958</figcaption>
+        <figcaption>06 · China's First Premier Zhou Enlai 周恩来总理 &amp; Miss Tang Ying 唐莹 (唐星文 on the left side of Premier), the lead ballerina of The Spanish Daughter / Laurencia (Ballet) 芭蕾舞剧《西班牙女儿》女主角 1958</figcaption>
       </figure>
+                <div class="ballet-frame">
+                    <div class="ballet-frame-label">舞剧背景 · ABOUT THE BALLET</div>
+                    <h3>Laurencia (Ballet)</h3>
+                    <p class="ballet-sub">Known in Chinese as 《西班牙女儿》</p>
+                    <p>Based on <em>Fuente Ovejuna</em>, the classic drama by Lope de Vega. The ballet premiered in 1939, choreographed by Vakhtang Chabukiani. The story is set in the Spanish village of Fuente Ovejuna in the 15th century.</p>
+                    <p>The cruel and arrogant Commander Gomez, a local feudal lord, and his soldiers tyrannise the villagers. He is obsessed with Laurencia, the daughter of the village mayor and the ballet heroine. Laurencia is betrothed to Frondoso, a young peasant.</p>
+                    <p>When Gomez tries to assault Laurencia in the woods, Frondoso bravely defends her and drives the tyrant away. Filled with rage, Gomez waits for revenge. He bursts into Laurencia and Frondoso's wedding celebration, arrests Frondoso and abducts Laurencia to his castle.</p>
+                    <p>Laurencia escapes and returns to the village. She shames the frightened villagers for their cowardice and delivers a stirring call to resist oppression. Inspired by her courage, all villagers rise up together. Armed with farm tools, they storm the castle, defeat the soldiers and kill the Commander.</p>
+                    <p>Later, royal judges come to investigate the killing. Under torture, every villager gives the same answer: <strong>"Fuente Ovejuna did it."</strong> No single person will take sole blame. Moved by the villagers' solidarity, the Spanish monarchs finally pardon the whole village.</p>
+                    <p>The ballet celebrates dignity, collective resistance against tyranny, loyal love and the courage of ordinary people.</p>
+                    <h4>芭蕾舞剧《劳伦西亚》，中文译名为《西班牙女儿》</h4>
+                    <p class="ballet-cn">改编自洛佩·德·维加经典剧本《羊泉村》，1939年首演，编导瓦赫坦·恰布基阿尼。故事发生在15世纪西班牙羊泉村。</p>
+                    <p class="ballet-cn">残暴骄横的封建领主戈梅斯和手下士兵欺压村民。他垂涎村长之女、本剧女主角劳伦西亚。劳伦西亚与青年农民弗朗多索早已定下婚约。</p>
+                    <p class="ballet-cn">戈梅斯在林间企图强暴劳伦西亚，弗朗多索挺身而出保护她，迫使戈梅斯退走。戈梅斯怀恨伺机报复。他闯入劳伦西亚与弗朗多索的婚礼，逮捕新郎，将劳伦西亚掳回城堡。</p>
+                    <p class="ballet-cn">劳伦西亚奋力逃回村庄，痛斥怯懦的乡亲，慷慨号召大家奋起反抗。村民被她的勇气唤醒，拿起农具冲进城堡，击溃士兵、杀死领主。</p>
+                    <p class="ballet-cn">之后王室派员追查凶手。无论如何刑讯，所有村民的回答都一致：<strong>"是羊泉村所有人干的。"</strong> 没有人单独认罪。西班牙君主最终被村民团结的意志打动，赦免全体村民。</p>
+                    <p class="ballet-cn">这部舞剧歌颂人的尊严、集体抗暴、忠贞爱情与普通人的英雄气概。</p>
+                </div>
       <figure>
         <span class="photo" style="width:min(900px,100%)"><img src="images/HaiWuTian-book3.jpg" alt="《从海武田飞出的歌》第二章内页跨页" loading="lazy"></span>
         <figcaption>07 · 内页 Inner Pages</figcaption>
