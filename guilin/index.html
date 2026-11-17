@@ -64,6 +64,14 @@
     border-bottom: 1px solid rgba(185, 58, 27, 0.3); padding-bottom: 2px;
   }
   .top-head .url a:hover { border-bottom-color: var(--vermillion); }
+  .top-head .lead {
+    max-width: 780px; margin: 30px auto 0; text-align: center;
+    font-size: 16.5px; line-height: 2.1; letter-spacing: 0.5px; color: var(--ink-mute);
+  }
+  .top-head .lead::before {
+    content: ""; display: block; width: 44px; height: 2px;
+    background: var(--gold); margin: 0 auto 24px;
+  }
 
   .top-toc {
     background: var(--card); border: 1px solid var(--line); border-radius: 3px;
@@ -179,6 +187,44 @@
   }
   .hero .authors { font-size: clamp(15px, 1.5vw, 19px); color: #D8CFBB; letter-spacing: 1px; }
   .hero .publish { margin-top: 14px; font-size: 15px; color: var(--ink-faint); letter-spacing: 1px; }
+
+  /* ---------- Cover feature (Tong Cho Sam) ---------- */
+  .cover-feature {
+    background: var(--paper-deep); padding: 96px 24px;
+    text-align: center; border-bottom: 1px solid var(--line);
+  }
+  .cover-feature .cf-card {
+    max-width: 460px; margin: 0 auto 40px;
+    border: 1.5px solid var(--vermillion); border-radius: 4px;
+    background: var(--card); padding: 16px;
+    box-shadow: 0 18px 40px -10px rgba(27, 23, 18, 0.22);
+  }
+  .cover-feature .cf-card img {
+    width: 100%; display: block; border-radius: 2px;
+  }
+  .cover-feature .cf-name {
+    font-size: clamp(26px, 3vw, 40px); font-weight: 700;
+    letter-spacing: 6px; color: var(--ink); line-height: 1.5;
+  }
+  .cover-feature .cf-role {
+    margin-top: 16px; font-size: clamp(17px, 1.8vw, 22px);
+    letter-spacing: 4px; color: var(--vermillion); font-weight: 600;
+  }
+  .cover-feature .cf-role-en {
+    margin-top: 12px; font-size: clamp(14px, 1.4vw, 18px);
+    letter-spacing: 1.5px; color: var(--ink-mute); line-height: 1.8;
+  }
+  .cover-feature .cf-links { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
+  .cover-feature .cf-links a {
+    display: inline-block; padding: 11px 26px; border-radius: 999px;
+    border: 1px solid var(--vermillion); color: var(--vermillion);
+    font-size: 14px; letter-spacing: 2px; text-decoration: none;
+    transition: all 0.15s ease;
+  }
+  .cover-feature .cf-links a:hover { background: var(--vermillion); color: var(--paper); }
+  .cover-feature .cf-note {
+    margin-top: 26px; font-size: 13.5px; letter-spacing: 1px; color: var(--ink-faint);
+  }
 
   /* ---------- About ---------- */
   .about { padding: 96px 24px; text-align: center; }
@@ -462,6 +508,7 @@
         <h1>桂林家人的自传</h1>
         <p class="en">唐家梁家的故事 · Guilin Family Biographies</p>
         <p class="url"><a href="https://tonytong.cc/guilin/">https://tonytong.cc/guilin/</a></p>
+        <p class="lead">唐楚三，1941 生于战时广西，兴安海武田长大；青年赴港，创办大利实业 Talent Industrial Company，改革开放早期回桂林投资兴办电子合资企业；同时为笛子音乐人、创作者；与儿子唐仪 TonyTong 同为唐楚三家族基金会联合创始人，传记《从海武田飞出的歌》记录其一生。</p>
       </div>
       <div class="top-toc">
         <div class="top-toc-label">目录 · TABLE OF CONTENTS (TOC)</div>
@@ -560,6 +607,21 @@
     <div class="divider"></div>
     <p class="const-zh">唐楚三家族基金会 章程</p>
     <p class="const-en">Tong Cho Sam Family Foundation - Family Constitution</p>
+  </section>
+
+  <section class="cover-feature" id="tongsam-cover">
+    <div class="sec-label">人物 · 唐楚三</div>
+    <div class="cf-card">
+      <img src="/guilin/images/TongChoSam-HaiWuTian-cover.jpg" alt="唐楚三笛乐演奏封面 · Tong Cho Sam playing DiZi - A Song Soaring from HaiWuTian">
+    </div>
+    <div class="cf-name">从海武田飞出的歌 · 唐楚三</div>
+    <div class="cf-role">企业家 · 笛乐演奏家</div>
+    <div class="cf-role-en">Tong Cho Sam - Entrepreneur - Chinese Flute Musician</div>
+    <div class="cf-links">
+      <a href="/guilin/images/TongChoSam-HaiWuTian-Song.pdf" target="_blank" rel="noopener">查看封面 PDF · View PDF</a>
+      <a href="#tongsam1">传记全文 · Biography ↓</a>
+    </div>
+    <p class="cf-note">封面设计 · 唐楚三家族基金会 www.TonyTong.cc/guilin · 秦忠合著 1995 广西民族出版社</p>
   </section>
 
   <section class="about">
